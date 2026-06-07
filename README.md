@@ -1,237 +1,312 @@
-# SQL-Data-Warehouse-Project
-Building a modern data warehouse with SQL Server, including ETL processes, Data Modeling and Analytics.
-# 🚀 Data Warehouse & Analytics Project
+# 🚀 SQL Data Warehouse Project
+
+### Building a Modern Data Warehouse with SQL Server using ETL Processes, Data Modeling, and Analytics Engineering
 
 <p align="center">
 
-![SQL Server](https://img.shields.io/badge/SQL_Server-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)
+![SQL Server](https://img.shields.io/badge/SQL_Server-CC2927?style=for-the-badge\&logo=microsoftsqlserver\&logoColor=white)
 ![Data Warehouse](https://img.shields.io/badge/Data_Warehouse-005571?style=for-the-badge)
 ![ETL](https://img.shields.io/badge/ETL-FF6F00?style=for-the-badge)
-![Analytics](https://img.shields.io/badge/Analytics-4285F4?style=for-the-badge)
-![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
+![Analytics Engineering](https://img.shields.io/badge/Analytics_Engineering-4285F4?style=for-the-badge)
 
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=22&pause=1000&color=36BCF7&center=true&vCenter=true&width=700&lines=Building+a+Modern+Data+Warehouse;ETL+Pipelines+with+SQL+Server;Business+Intelligence+and+Analytics;Turning+Raw+Data+Into+Insights" />
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=22&pause=1000&color=36BCF7&center=true&vCenter=true&width=750&lines=Building+a+Modern+Data+Warehouse;Bronze+Silver+Gold+Architecture;ETL+Pipelines+with+SQL+Server;Data+Engineering+Project;Turning+Raw+Data+Into+Business+Insights" />
 </p>
 
 ---
 
-## 📖 Overview
+# 📖 Overview
 
-This project demonstrates the complete lifecycle of a modern data warehouse solution, from ingesting raw data to generating business insights.
+This project demonstrates the development of a modern SQL Server Data Warehouse using the Medallion Architecture (**Bronze → Silver → Gold**).
 
-The solution consolidates data from multiple business systems, applies data quality processes, transforms and models data, and produces analytics-ready datasets for reporting and decision-making.
+The solution ingests raw data from ERP and CRM systems, applies data cleansing and transformation processes, and organizes information into business-ready structures suitable for analytics and reporting.
+
+### Key Highlights
+
+* 📥 Data Ingestion from ERP & CRM systems
+* ⚙️ ETL Pipeline Development using T-SQL
+* 🏗️ Medallion Architecture Implementation
+* 📊 Dimensional Data Modeling
+* ✅ Data Quality Validation
+* 📚 Comprehensive Technical Documentation
+* 🔄 Scalable Data Warehouse Design
 
 ---
 
 # 🏗️ Project Architecture
 
-# 📂 Project Structure
-
 <p align="center">
-  <img src="Docs/DWH-Architecture.png" width="900"> 
+  <img src="Docs/DWH-Architecture.png" width="950">
 </p>
 
-# 🎯 Project Requirements
-
-## 📦 Building the Data Warehouse (Data Engineering)
-
-### Objective
-
-Develop a modern data warehouse using SQL Server to consolidate sales data and support analytical reporting and informed business decision-making.
-
-### Specifications
-
-✔ Import data from ERP and CRM systems
-
-✔ Process source data from CSV files
-
-✔ Clean and resolve data quality issues
-
-✔ Integrate multiple sources into a unified data model
-
-✔ Create analytics-ready datasets
-
-✔ Document the complete solution
-
 ---
 
-## 📊 Analytics & Reporting (Data Analytics)
+# 🎯 Project Objective
 
-### Objective
+The objective of this project is to build a modern data warehouse using SQL Server that:
 
-Develop SQL-based analytics that provide actionable insights into:
+✔ Consolidates ERP and CRM source data
 
-- 👥 Customer Behavior
-- 📦 Product Performance
-- 📈 Sales Trends
-- 💰 Revenue Analysis
-- 🌎 Geographic Performance
+✔ Implements Bronze, Silver, and Gold layers
 
-These insights help stakeholders make data-driven decisions.
+✔ Supports scalable ETL workflows
 
----
+✔ Applies data quality validation rules
 
-# ⚙️ Technology Stack
+✔ Creates business-ready analytical structures
 
-| Category | Technology |
-|-----------|------------|
-| Database | SQL Server |
-| ETL | T-SQL |
-| Data Modeling | Star Schema |
-| Analytics | SQL |
-| Reporting | Power BI |
-| Version Control | Git & GitHub |
-
----
-
-# 🗄️ Data Warehouse Design
-
-## Layers
-
-### 🥉 Bronze Layer
-
-Raw source data imported from ERP and CRM systems.
-
-### 🥈 Silver Layer
-
-Data cleansing, standardization, transformation, and validation.
-
-### 🥇 Gold Layer
-
-Business-ready analytical model optimized for reporting.
+✔ Follows modern data engineering best practices
 
 ---
 
 # 📂 Project Structure
 
 ```text
-Data-Warehouse-Project
+SQL-Data-Warehouse-Project
 │
-├── datasets/
+├── Datasets/
 │
-├── scripts/
-│   ├── bronze/
-│   ├── silver/
-│   └── gold/
+├── Scripts/
+│   ├── Bronze/
+│   │   ├── ddl_bronze.sql
+│   │   └── procedure_load_bronze.sql
+│   │
+│   ├── Silver/
+│   │   ├── ddl_silver.sql
+│   │   └── procedure_load_silver.sql
+│   │
+│   └── Gold/
+│       └── ddl_gold.sql
 │
-├── analytics/
+├── Tests/
+│   ├── quality_checks_silver.sql
+│   └── quality_checks_gold.sql
 │
-├── powerbi/
-│
-├── docs/
+├── Docs/
+│   ├── DWH-Architecture.png
+│   ├── data_flow.png
+│   ├── data_integration.png
+│   ├── data_model.png
+│   ├── data_catalog.md
+│   └── naming_conventions.md
 │
 └── README.md
 ```
 
 ---
 
-# 📈 Analytics Delivered
+# 🗄️ Data Warehouse Layers
 
-### Customer Analysis
+## 🥉 Bronze Layer
 
-- Customer segmentation
-- Purchase behavior
-- Customer value analysis
+Raw ingestion layer that stores source data exactly as received.
 
-### Product Analysis
+### Purpose
 
-- Top-performing products
-- Revenue contribution
-- Product trends
+* Import CSV source files
+* Preserve original data
+* Maintain historical records
+* Minimize transformations
 
-### Sales Analysis
+### Scripts
 
-- Monthly sales trends
-- Revenue growth
-- Sales performance tracking
+🔗 **[DDL Bronze](https://github.com/DeepakDeepak07/SQL-Data-Warehouse-Project/blob/main/Scripts/Bronze/ddl_bronze.sql)**
 
----
-
-# 📸 Dashboard Preview
-
-## Executive Dashboard
-
-![Dashboard](images/dashboard-overview.png)
+🔗 **[Load Bronze Procedures](https://github.com/DeepakDeepak07/SQL-Data-Warehouse-Project/blob/main/Scripts/Bronze/procedure_load_bronze.sql)**
 
 ---
 
-## Sales Analysis
+## 🥈 Silver Layer
 
-![Sales Dashboard](images/sales-dashboard.png)
+Data cleansing, transformation, and standardization layer.
 
----
+### Purpose
 
-## Customer Insights
+* Standardize formats
+* Remove duplicates
+* Resolve data quality issues
+* Apply transformation logic
 
-![Customer Dashboard](images/customer-dashboard.png)
+### Scripts
 
----
+🔗 **[DDL Silver](https://github.com/DeepakDeepak07/SQL-Data-Warehouse-Project/blob/main/Scripts/Silver/ddl_silver.sql)**
 
-# 🔍 Data Quality Checks
-
-- Missing value detection
-- Duplicate removal
-- Standardization
-- Validation rules
-- Data consistency checks
+🔗 **[Load Silver Procedures](https://github.com/DeepakDeepak07/SQL-Data-Warehouse-Project/blob/main/Scripts/Silver/procedure_load_silver.sql)**
 
 ---
 
-# 📊 Sample KPIs
+## 🥇 Gold Layer
 
-| KPI | Description |
-|------|------------|
-| Revenue | Total Sales Revenue |
-| Orders | Number of Orders |
-| Customers | Unique Customers |
-| AOV | Average Order Value |
-| Growth % | Revenue Growth |
+Business-ready presentation layer optimized for analytics.
 
----
+### Purpose
 
-# 🚀 Key Features
+* Dimensional modeling
+* Fact and dimension tables
+* Analytical reporting structures
+* Business consumption layer
 
-✅ End-to-End Data Warehouse
+### Scripts
 
-✅ ETL Pipeline Development
-
-✅ Data Cleansing
-
-✅ Dimensional Modeling
-
-✅ SQL Analytics
-
-✅ Power BI Reporting
-
-✅ Business Intelligence Dashboards
+🔗 **[DDL Gold](https://github.com/DeepakDeepak07/SQL-Data-Warehouse-Project/tree/main/Scripts/Gold)**
 
 ---
 
-# 📚 Learning Outcomes
+# 📑 Documentation
 
-This project demonstrates practical experience with:
+All technical documentation can be accessed directly below.
 
-- Data Warehousing
-- ETL Development
-- SQL Server
-- Data Modeling
-- Business Intelligence
-- Power BI
-- Analytics Engineering
+<table>
+<tr>
+<td align="center" width="50%">
+
+### 🔄 Data Flow Diagram
+
+Illustrates how data moves through Bronze, Silver, and Gold layers.
+
+📄 **[View Diagram](https://github.com/DeepakDeepak07/SQL-Data-Warehouse-Project/blob/main/Docs/data_flow.png)**
+
+</td>
+
+<td align="center" width="50%">
+
+### 🔗 Data Integration Diagram
+
+Shows how ERP and CRM systems are integrated into the warehouse.
+
+📄 **[View Diagram](https://github.com/DeepakDeepak07/SQL-Data-Warehouse-Project/blob/main/Docs/data_integration.png)**
+
+</td>
+</tr>
+
+<tr>
+<td align="center">
+
+### 🗂️ Data Model Diagram
+
+Displays relationships between warehouse entities.
+
+📄 **[View Diagram](https://github.com/DeepakDeepak07/SQL-Data-Warehouse-Project/blob/main/Docs/data_model.png)**
+
+</td>
+
+<td align="center">
+
+### 📚 Data Catalog
+
+Business definitions, tables, and column descriptions.
+
+📄 **[View Documentation](https://github.com/DeepakDeepak07/SQL-Data-Warehouse-Project/blob/main/Docs/data_catalog.md)**
+
+</td>
+</tr>
+
+<tr>
+<td align="center">
+
+### 📏 Naming Conventions
+
+Standards used across the project.
+
+📄 **[View Standards](https://github.com/DeepakDeepak07/SQL-Data-Warehouse-Project/blob/main/Docs/naming_conventions.md)**
+
+</td>
+
+<td align="center">
+
+### 📖 Full Project Documentation
+
+Detailed project walkthrough and implementation notes.
+
+📄 **[Open Notion Documentation](https://app.notion.com/p/SQL-Data-Warehouse-Project-2b444f85434383e4a26f8110020fe4cd?source=copy_link)**
+
+</td>
+</tr>
+</table>
+
+---
+
+# ✅ Data Quality Testing
+
+The project includes SQL-based validation checks to ensure data integrity and consistency.
+
+### Silver Layer Tests
+
+* Null value validation
+* Duplicate detection
+* Data consistency checks
+* Transformation verification
+
+### Gold Layer Tests
+
+* Referential integrity validation
+* Business rule validation
+* Data completeness checks
+
+```text
+Tests/
+├── quality_checks_silver.sql
+└── quality_checks_gold.sql
+```
+
+---
+
+# 📂 Source Datasets
+
+The repository contains CSV files used as source data for the ETL process.
+
+```text
+Datasets/
+```
+
+These files simulate ERP and CRM source systems used throughout the project.
+
+---
+
+# 🛠️ Technology Stack
+
+| Category        | Technology             |
+| --------------- | ---------------------- |
+| Database        | SQL Server             |
+| ETL             | T-SQL                  |
+| Data Modeling   | Star Schema            |
+| Architecture    | Medallion Architecture |
+| Documentation   | Markdown               |
+| Version Control | Git & GitHub           |
+
+---
+
+# 🎓 Skills Demonstrated
+
+* SQL Server Development
+* ETL Pipeline Development
+* Data Warehousing
+* Data Modeling
+* Medallion Architecture
+* Data Quality Testing
+* Stored Procedures
+* Documentation
+* Git & GitHub
+* Analytics Engineering
 
 ---
 
 # 👨‍💻 Author
 
-**Deepak**
+### Deepak
 
-Business Administration Accounting Graduate
+**Business Administration (Accounting) Graduate**
 
-Aspiring Data Analyst | Future CPA
+📊 Aspiring Data Analyst
+
+📈 Future CPA
 
 ---
 
-## ⭐ If you found this project useful, consider starring the repository.
+<p align="center">
+
+### ⭐ If you found this project useful, consider giving it a star!
+
+</p>
