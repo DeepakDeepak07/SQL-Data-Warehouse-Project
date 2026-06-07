@@ -31,7 +31,7 @@ The solution consolidates data from multiple business systems, applies data qual
 # 📂 Project Structure
 
 <p align="center">
-  <img src="images/DWH-architecture.png" width="900">
+  <img src="docs/DWH-architecture.png" width="900">
 </p>
 
 ```text
