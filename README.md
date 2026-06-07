@@ -33,7 +33,6 @@ The solution consolidates data from multiple business systems, applies data qual
 <p align="center">
   <img src="Docs/DWH-Architecture.png" width="900"> 
 </p>
----
 
 # 🎯 Project Requirements
 
