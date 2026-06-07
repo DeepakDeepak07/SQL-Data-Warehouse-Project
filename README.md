@@ -31,31 +31,8 @@ The solution consolidates data from multiple business systems, applies data qual
 # 📂 Project Structure
 
 <p align="center">
-  <img src="docs/DWH-architecture.png" width="900">
+  <img src="Docs/DWH-Architecture.png" width="900"> 
 </p>
-
-```text
-Source Systems
-     │
-     ▼
- CSV Files (ERP & CRM)
-     │
-     ▼
- Bronze Layer
- Raw Data Storage
-     │
-     ▼
- Silver Layer
- Data Cleansing & Transformation
-     │
-     ▼
- Gold Layer
- Business Ready Data Model
-     │
-     ▼
- Analytics & Reporting
-```
-
 ---
 
 # 🎯 Project Requirements
